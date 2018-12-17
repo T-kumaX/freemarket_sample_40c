@@ -1,385 +1,296 @@
-:root {
-  cursor: auto;
-  background-color: #fff;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  color: #000;
-  cursor: default;
-  font: 66.66667% sans-serif;
-}
-
-html {
-  height: 100%;
-  overflow-y: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  overflow-y: scroll;
-  -webkit-text-size-adjust: 100%;
-}
-
-* {
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-*, ::before, ::after {
-  border-style: solid;
-  border-width: 0;
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-::before, ::after {
-  text-decoration: inherit;
-  vertical-align: inherit;
-}
-
-.clearfix:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.fas fa-camera:before {
-    content: '';
-}
-
-body {
-    position: relative;
-    min-height: 100%;
-    background: #f5f5f5;
-    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-    font-size: 14px;
-    color: #333;
-    line-height: 1;
-}
-
-h2 {
-    font-size: 22px;
-    line-height: 1.4;
-}
-
-img {
-    vertical-align: middle;
-}
-
-audio, canvas, iframe, img, svg, video {
-    vertical-align: middle;
-}
-
-ul, ol {
-    list-style: none;
-}
-
-a {
-    color: #0099e8;
-    text-decoration: none;
-}
-
-a, area, button, input, label, select, textarea, [tabindex] {
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-}
-
-
-
-
-.app-banner {
-  background: #fff;
-}
-@media screen and (min-width: 768px) {
-  .app-banner {
-    background: url(https://www.mercari.com/jp/assets/img/common/jp/top/download_bg_pc.jpg?36255015);
-    background-position: center;
-  }
-  .app-banner-pc {
+// footer上部
+.app-banner{
+  background: url(https://www.mercari.com/jp/assets/img/common/jp/top/download_bg_pc.jpg?61682159);
+  background-position: center;
+  .app-banner-pc{
+    display: block;
     overflow: hidden;
     position: relative;
-    display: none;
     width: 750px;
     height: 260px;
     margin: 0 auto;
     color: #fff;
   }
-  @media screen and (min-width: 768px) {
-    .app-banner-pc {
-      display: block;
+}
+
+.app-banner-pc-inner{
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  .app-banner-pc-inner-h2{
+    text-shadow: 0 0 5px rgba(0,0,0,0.4);
+    font-size: 24px;
+    margin: 0;
+    line-height: 1.4;
+  }
+  .app-banner-pc-inner-p{
+    text-shadow: 0 0 5px rgba(0,0,0,0.4);
+    font-size: 35px;
+    margin: 10px 0 0;
+  }
+  .app-banner-icon.clearfix{
+    margin: 20px 0 0;
+    .app-banner-icon-figure{
+      float: left;
+      .app-banner-icon-img{
+        vertical-align: middle;
+      }
     }
-    .app-banner-pc-inner {
-      position: absolute;
-      top: 50%;
-      left: 16px;
-      -webkit-transform: translate(0, -50%);
-      transform: translate(0, -50%);
-    }
-    @media screen and (min-width: 1068px) {
-      .app-banner-pc-inner {
-        left: 0;
-      }
-      .app-banner-pc-inner h2 {
-        text-shadow: 0 0 5px rgba(0,0,0,0.4);
-        margin: 0;
-        font-size: 16px;
-      }
-      @media screen and (min-width: 1068px) {
-        .app-banner-pc-inner h2 {
-        font-size:24px;
-        }
-      }
-      .app-banner-pc-inner p {
-        text-shadow: 0 0 5px rgba(0,0,0,0.4);
-        margin: 10px 0 0;
-        font-size: 24px;
-      }
-      @media screen and (min-width: 1068px) {
-        .app-banner-pc-inner p {
-          font-size:35px;
-        }
-      }
-      .app-banner-icon {
-        margin: 20px 0 0;
-        height: 68px;
-        .app-banner-icon-figure {
-          float: left;
-          .app-banner-icon img {
+    .app-banner-icon-ul{
+      float: left;
+      margin: 0 0 0 24px;
+      line-height: 68px;
+      list-style: none;
+      .app-banner-icon-li{
+        float: left;
+        .app-banner-icon-a{
+          display: block;
+          line-height: 68px;
+          color: #0099e8;
+          text-decoration: none;
+          touch-action: manipulation;
+          .app-banner-icon-img{
             vertical-align: middle;
           }
         }
-        .app-banner-icon-ul {
-          display: flex;
+      }
+      .app-banner-icon-li:last-child{
+        margin: 0 0 0 16px;
+        float: left;
+        .app-banner-icon-a {
+          display: block;
           line-height: 68px;
-          .app-banner-icon-li {
-            margin: 0 0 0 24px;
-            .app-banner-icon a {
-              display: block;
-              line-height: 68px;
-              .app-banner-icon img {
-                vertical-align: middle;
-              }
-            }
-          }
-          .app-banner-icon-li-last-child {
-            margin: 0 0 0 16px;
-            .app-banner-icon a {
-              display: block;
-              line-height: 68px;
-              .app-banner-icon img {
-                vertical-align: middle;
-              }
-            }
+          color: #0099e8;
+          text-decoration: none;
+          touch-action: manipulation;
+          .app-banner-icon-img {
+            vertical-align: middle;
           }
         }
       }
-      .app-banner-pc-figure {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 300px;
-        height: 100%;
-        .app-banner-pc-figure-img {
-          width: 100%;
-        }
+      .clearfix:after {
+        content: '';
+        display: block;
+        clear: both;
+        border-style: solid;
+        border-width: 0;
+        text-decoration: inherit;
+        vertical-align: inherit;
+        box-sizing: inherit;
       }
+    }
+    .clearfix:after {
+      content: '';
+      display: block;
+      clear: both;
+      border-style: solid;
+      border-width: 0;
+      text-decoration: inherit;
+      vertical-align: inherit;
+      box-sizing: inherit;
     }
   }
 }
 
-
-.footer-cell li {
-  margin: 16px 0 0;
-}
-.footer-cell li:first-child {
-  margin: 24px 0 0;
-}
-
-.footer-cell a {
-          display: block;
-        }
-
-.footer-cell.mobile a {
-    display: inline-block;
-    opacity: 1;
+.app-banner-pc-figure{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  height: 100%;
+  .app-banner-pc-figure-img{
+    width: 100%;
+    vertical-align: middle;
+  }
 }
 
-.footer-cell.mobile li {
-    color: #fff;
-}
-
-.footer-cell.mobile li:first-child {
-    margin: 16px 0 0;
-}
-
-.global-footer a {
-    color: #fff !important;
-    font-size: 14px;
-}
-
-
-.global-footer {
-  padding: 40px 20px;
+// footer下部
+.global-footer{
+  padding: 60px 0;
+  text-align: center;
   background: #212121;
-  color: #fff
-}
-@media screen and (min-width: 768px) {
-  .global-footer {
-    padding:60px 0;
-    text-align: center;
-  }
-  nav {
-    @media screen and (min-width: 768px) {
-      .global-footer-nav {
-        width:700px;
-        margin: 0 auto;
-      }
-    }
-    @media screen and (min-width: 1068px) {
-      .global-footer-nav {
-        width:1020px;
-      }
-      .download-app {
-        text-align: center;
-      }
-      @media screen and (min-width: 768px) {
-        .download-app {
-          display:none;
-        }
-        .download-app a {
-          color: #fff;
-          display: block;
-          .download-app img {
-            margin: 0 8px 0 0;
-          }
-        }
-      }
-      .footer-cell {
-        margin: 40px auto 0;
-      }
-      .footer-cell:last-child {
-      margin: 0;
-      }
-      @media screen and (min-width: 768px) {
-        .footer-cell {
-          display:inline-block;
-          width: 23%;
-          margin: 0 2% 0 0;
-          vertical-align: top;
-        }
-        .footer-head {
-          color: #fff;
-          font-size: 16px;
-          font-weight: bold;
-        }
-        .footer-nav-lang {
-          .footer-nav-lang li {
-            .footer-nav-lang a {
-              margin: 0 auto;
-              opacity: .3;
-            }
-            @media screen and (min-width: 768px) {
-              .footer-nav-lang a {
-                width:auto;
-              }
-            }
-            .footer-nav-lang a.active {
-                opacity: 1.0;
-            }
-          }
-        }
-      }
-    }
-  }
-  .footer-logo {
-    display: block;
-    margin: 40px 0 0;
-    text-align: center;
-  }
-  .footer-copyright {
-    margin: 8px 0 0;
-    text-align: center;
-    .footer-copyright-small {
-    font-size: 14px;
-    }
+  color: #fff;
+  .global-footer-nav {
+    width: 1020px;
+    margin: 0 auto;
   }
 }
-.footer-sell-btn {
-    position: fixed;
-    bottom: -14px;
-    right: -14px;
-    z-index: 1000;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: #ea352d;
-    color: #fff !important;
-    text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .footer-sell-btn {
-      bottom:32px;
-      right: 32px;
-      width: 160px;
-      height: 160px;
-      font-size: 22px;
-  }
-  .footer-sell-btn div {
-    margin: 14px 0 0;
-  }
-  @media screen and (min-width: 768px) {
-      .footer-sell-btn div {
-        margin:32px 0 0;
-      }
-  }
-  .footer-sell-btn .fas fa-camera {
-    margin: 4px 0 0;
-    font-size: 24px;
-  }
-  @media screen and (min-width: 768px) {
-    .footer-sell-btn .fas fa-camera {
-      margin:8px 0 0;
-      font-size: 54px
-    }
-  }
-}
-.custom-banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 70px;
-    background: #f5f5f5;
-    z-index: 1000;
-    -webkit-transition: ease-out .35s;
-    transition: ease-out .35s;
-}
-@media screen and (min-width: 768px) {
-    .custom-banner {
-        height:100px;
-    }
-}
-.custom-banner-ios,.custom-banner-android {
+
+.global-footer-nav-ul {
+  list-style: none;
+  .download-app{
+    color: #333;
     display: none;
-}
-.banner-pattern1 {
-  padding: 6px 1.875%;
-}
-@media screen and (min-width: 768px) {
-  .banner-pattern1 {
-    padding:21px 3.125%;
-  }
-  .banner-pattern1 figure {
-    float: left;
-    overflow: hidden;
-    margin: 0 0 0 24px;
-    border-radius: 16px;
-    border: 1px solid #ccc;
-    img {
+    text-align: center;
+    .download-app-a{
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      .download-app-img{
+        vertical-align: middle;
+      }
     }
   }
-  .banner-pattern1>div {
-    float: right;
-    text-align: right;
+  .footer-cell{
+    color: #333;
+    display: inline-block;
+    width: 23%;
+    margin: 0 2% 0 0;
+    vertical-align: top;
+    padding: 0;
+    .footer-head{
+      color: #fff;
+      font-size: 16px;
+      line-height: 1.4;
+      font-weight: bold;
+    }
+    .footer-cell-ul{
+      list-style: none;
+      .footer-cell-li:first-child{
+        margin: 24px 0 0;
+        color: #333;
+        .footer-cell-a {
+          // transition: all .3s;
+          display: block;
+          color: #fff;
+          touch-action: manipulation;
+          font-size: 14px;
+        }
+        .footer-cell-a:hover {
+          opacity: 0.5;
+        }
+      }
+      .footer-cell-li {
+        margin: 16px 0 0;
+        color: #333;
+        .footer-cell-a {
+          // transition: all .3s;
+          display: block;
+          color: #fff;
+          touch-action: manipulation;
+          font-size: 14px;
+        }
+        .footer-cell-a:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+// 言語選択部分
+.footer-cell:last-child{
+  margin: 0;
+  color: #333;
+  display: inline-block;
+  width: 23%;
+  vertical-align: top;
+  .footer-head{
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .footer-nav-lang{
+    list-style: none;
+    .footer-cell-li:first-child{
+      margin: 24px 0 0;
+      color: #333;
+      .footer-nav-lang-a{
+        width: auto;
+        margin: 0 auto;
+        opacity: .3;
+        display: block;
+        color: #fff;
+        font-size: 14px;
+        touch-action: manipulation;
+        .footer-nav-lang-img{
+          margin: 0 8px 0 0;
+          vertical-align: middle;
+        }
+      }
+    }
+    .footer-cell-li {
+      margin: 16px 0 0;
+      color: #333;
+      .footer-nav-lang-a{
+        width: auto;
+        margin: 0 auto;
+        opacity: .3;
+        display: block;
+        color: #fff;
+        font-size: 14px;
+        touch-action: manipulation;
+        .footer-nav-lang-img{
+          margin: 0 8px 0 0;
+          vertical-align: middle;
+        }
+      }
+    }
+    .footer-cell-li {
+      margin: 16px 0 0;
+      color: #333;
+      .footer-nav-lang-a.active {
+        opacity: 1.0;
+        width: auto;
+        margin: 0 auto;
+        display: block;
+        color: #fff;
+        touch-action: manipulation;
+      }
+    }
+  }
+}
+
+// コピーライト部分
+.footer-logo-a{
+  display: block;
+  margin: 40px 0 0;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  .footer-logo-img{
+    vertical-align: middle;
+  }
+}
+.footer-copyright{
+  margin: 8px 0 0;
+  text-align: center;
+  .footer-copyright-small {
+    font-size: 14px;
+  }
+}
+
+// 出品丸ボタン部分
+.footer-sell-btn{
+  bottom: 32px;
+  right: 32px;
+  width: 160px;
+  height: 160px;
+  font-size: 22px;
+  position: fixed;
+  border-radius: 50%;
+  background: #ea352d;
+  color: #fff;
+  text-align: center;
+  text-decoration: none !important;
+  .footer-sell-div{
+    color: white;
+    margin: 32px 0 0;
+  }
+  .fas.fa-camera.fa-3x{
+    color: white;
+    font-size: 60px;
+    display: inline-block;
+    speak: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    .fas.fa-camera.fa-3x:before {
+    content: '\f030';
+    }
   }
 }
