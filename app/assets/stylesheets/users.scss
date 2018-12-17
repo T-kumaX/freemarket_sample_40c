@@ -1,0 +1,59 @@
+.mypage{
+  background-color: #f5f5f5;
+  &__contents{
+    margin: 0 auto;
+    padding: 40px 0;
+    width: 1020px;
+    height: 100%;
+    &:after{
+      content: "";
+      display: block;
+      clear:both;
+    }
+    .mypage__sidebar{
+      float:left;
+      width: 280px;
+      margin:0 40px 0 0;
+      &__nav{
+        &__list{
+          list-style: none;
+          li{
+            border-bottom: 1px solid #eee;
+            a{
+              position: relative;
+              display:block;
+              height: 48px;
+              padding: 16px;
+              color: #333;
+              background-color: #fff;
+              font-size: 14px;
+              &:hover{
+                background-color: #eee;
+                font-weight: 600;
+                opacity: 1;
+                i{
+                  color: #333;
+                }
+              }
+              i{
+                color: #eee;
+                position: absolute;
+                top: 20%;
+                right: 15px;
+              }
+            }
+          }
+        }
+        &__head{
+          margin: 40px 0 5px;
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+    }
+    .mypage__content{
+      float:right;
+      width: 700px;
+    }
+  }
+}

@@ -1,0 +1,168 @@
+body {
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  color: rgb(51, 51, 51);
+}
+
+.l-chapter-container:first-child {
+  margin: 0;
+}
+.l-chapter-container_3 {
+  background: #fff;
+  float: right;
+  .l-chapter-head {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 8px 24px;
+    border-bottom: 1px solid #f5f5f5;
+    text-align: center
+  }
+  .text-center {
+  text-align: center;
+  }
+  .l-single-inner {
+    padding: 64px;
+    border-top: 1px solid #f5f5f5;
+  }
+}
+
+.l-single-inner p {
+  margin: 8px 0 0;
+  line-height: 1.5;
+}
+
+.form-group:first-child {
+  margin: 0;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.form-group {
+  margin: 40px 0 0;
+  .form-require {
+    background: #ea352d;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+  }
+  .mypage-identification .address-info address {
+    font-size: 16px;
+    margin: 8px 0 0;
+  }
+  .mypage-identification .address-info {
+    margin: 0 0 0 4px;
+    .personal_address {
+      font-style: normal;
+    }
+  }
+}
+
+.mypage-identification .address-info address p {
+  margin: 0;
+}
+
+.span_edit {
+  color: #4689FF;
+}
+
+.birthday-select-wrap .select-wrap {
+  width: 150px;
+  display: inline-block;
+}
+.birthday-select-wrap {
+  display: inline-block;
+  .select-wrap {
+  position: relative;
+  background: #fff;
+    .select-default {
+      position: relative;
+      z-index: 2;
+      height: 55px;
+      padding: 0px 8px 0px 20px;
+      border-radius: 4px;
+      background: 0;
+      font-size: 16px;
+      line-height: 1.5;
+      cursor: pointer;
+      -webkit-appearance: none;
+      border: 1px solid #999;
+    }
+    .fa-angle-down {
+      font-size: 28px;
+      position: absolute;
+      color: #999;
+      bottom: 14px;
+      right: 12px;
+    }
+  }
+}
+
+.form-group .select-wrap {
+  margin: 8px 0 0;
+}
+
+.form-group select {
+  width: 100%;
+}
+
+.select-default:focus {
+  border: 1px solid #75A9FF;
+  outline: 0;
+}
+
+.select-wrap .icon-arrow-bottom {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  z-index: 2;
+  color: #888;
+  font-size: 8px;
+  transform: translate(0, -50%);
+}
+
+.birthday-select-wrap .select-wrap+span {
+  margin: 0 8px;
+}
+
+
+.form-info-text {
+  color: #888;
+}
+
+.mypage-identification button[type="submit"] {
+  margin: 40px 0 0 0;
+}
+
+.btn-red {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+}
+
+.btn-default {
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.fa-angle-right {
+  float: right;
+  color: #4689FF;
+  font-size: 21px;
+}
+
+.a_bottom {
+  float: right;
+  .a_bottom__span {
+    font-size: 15px;
+    color: #4689FF;
+  }
+}

@@ -31,13 +31,13 @@
                     %path{:d => "M77,49c-34.79,0 -63,28.21 -63,63c0,34.79 28.21,63 63,63c34.79,0 63,-28.21 63,-63c0,-4.3225 -0.4725,-8.54 -1.295,-12.6l-0.35,-1.4h-61.355v21h42c-3.3425,19.8625 -21.1925,35 -42,35c-23.205,0 -42,-18.795 -42,-42c0,-23.205 18.795,-42 42,-42c10.5,0 20.0725,3.885 27.44,10.255l15.05,-14.735c-11.2,-10.255 -26.11,-16.52 -42.49,-16.52zM175,77v21h-21v14h21v21h14v-21h21v-14h-21v-21z"}
           Googleでログイン
       .login-form-inner
-        = form_with model: @users do |form|
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
           .form-group
-            = form.text_field :email, class: "email_form", placeholder: "メールアドレス"
+            = f.email_field :email, autofocus: true, class: "email_form", placeholder: "メールアドレス"
           .form-group
-            = form.password_field :password, class: "password_form", placeholder: "パスワード"
+            = f.password_field :password, autocomplete: "off", class: "password_form", placeholder: "パスワード"
           %img.not_robot{:src => "https://www.souichi.club/wp-content/uploads/WordPress-340.jpg"}/
-          = form.submit "ログイン", class:"submit-button"
+          = f.submit "ログイン", class:"submit-button"
           %a.forget-password{:href => "#"} パスワードをお忘れの方
   .single-footer
     %nav

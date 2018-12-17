@@ -1,0 +1,52 @@
+.single-container
+  .single-header
+    %h1
+      %a{:href => "/"}
+        %img{:alt => "mercari", :height => "49px", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?819506670", :width => "185px"}/
+      %h1
+  .single-main
+    %section.l-single-container
+      %h2.l-single-head 新規会員登録
+      .l-single-inner
+        .l-single-content
+          %a.btn-default.btn-mail{:href => "/users/sign_up"}
+            %i.icon-mail
+              %svg{:height => "26", :style => " fill:#000000;", :viewbox => "0 0 224 224", :width => "26", :x => "0px", :xmlns => "http://www.w3.org/2000/svg", :y => "0px"}
+                %g{:fill => "none", "fill-rule" => "nonzero", "font-family" => "none", "font-size" => "none", "font-weight" => "none", :stroke => "none", "stroke-dasharray" => "", "stroke-dashoffset" => "0", "stroke-linecap" => "butt", "stroke-linejoin" => "miter", "stroke-miterlimit" => "10", "stroke-width" => "1", :style => "mix-blend-mode: normal", "text-anchor" => "none"}
+                  %path{:d => "M0,224v-224h224v224z", :fill => "none"}
+                  %g{:fill => "#cccccc"}
+                    %g#surface1
+                      %path{:d => "M35,28c-11.53907,0 -21,9.46093 -21,21v112c0,11.53907 9.46093,21 21,21h154c11.53907,0 21,-9.46093 21,-21v-112c0,-11.53907 -9.46093,-21 -21,-21zM35,42h154c0.49218,0 0.875,0.16407 1.3125,0.27343l-78.3125,54.19532l-78.3125,-54.19532c0.4375,-0.10937 0.82032,-0.27343 1.3125,-0.27343zM28,55.34375l84,58.1875l84,-58.1875v105.65625c0,3.9375 -3.0625,7 -7,7h-154c-3.9375,0 -7,-3.0625 -7,-7z"}
+            メールアドレスで登録
+          %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
+            %i.icon-facebook
+              %svg{:height => "26", :style => " fill:#000000;", :viewbox => "0 0 224 224", :width => "26", :x => "0px", :xmlns => "http://www.w3.org/2000/svg", :y => "0px"}
+                %g{:fill => "none", "fill-rule" => "nonzero", "font-family" => "none", "font-size" => "none", "font-weight" => "none", :stroke => "none", "stroke-dasharray" => "", "stroke-dashoffset" => "0", "stroke-linecap" => "butt", "stroke-linejoin" => "miter", "stroke-miterlimit" => "10", "stroke-width" => "1", :style => "mix-blend-mode: normal", "text-anchor" => "none"}
+                  %path{:d => "M0,224v-224h224v224z", :fill => "none"}
+                  %g{:fill => "#ffffff"}
+                    %path{:d => "M179.2,29.86667h-134.4c-8.25067,0 -14.93333,6.68267 -14.93333,14.93333v134.4c0,8.25067 6.68267,14.93333 14.93333,14.93333h74.66667v-67.2h-22.4v-22.4h22.4v-12.0288c0,-22.77333 11.09547,-32.7712 30.02347,-32.7712c9.06453,0 13.85813,0.672 16.128,0.97813v21.42187h-12.90987c-8.03413,0 -10.8416,4.24107 -10.8416,12.82773v9.57227h23.54987l-3.19573,22.4h-20.35413v67.2h37.33333c8.25067,0 14.93333,-6.68267 14.93333,-14.93333v-134.4c0,-8.25067 -6.69013,-14.93333 -14.93333,-14.93333z"}
+            Facebookで登録
+          %button#google-login.btn-default.btn-sns.btn-sns-google
+            %i.icon-google-plus
+              %svg{:height => "26", :style => " fill:#000000;", :viewbox => "0 0 224 224", :width => "32", :x => "0px", :xmlns => "http://www.w3.org/2000/svg", :y => "0px"}
+                %g{:fill => "none", "fill-rule" => "nonzero", "font-family" => "none", "font-size" => "none", "font-weight" => "none", :stroke => "none", "stroke-dasharray" => "", "stroke-dashoffset" => "0", "stroke-linecap" => "butt", "stroke-linejoin" => "miter", "stroke-miterlimit" => "10", "stroke-width" => "1", :style => "mix-blend-mode: normal", "text-anchor" => "none"}
+                  %path{:d => "M0,224v-224h224v224z", :fill => "none"}
+                  %g{:fill => "#ffffff"}
+                    %g#surface1
+                      %path{:d => "M77,49c-34.79,0 -63,28.21 -63,63c0,34.79 28.21,63 63,63c34.79,0 63,-28.21 63,-63c0,-4.3225 -0.4725,-8.54 -1.295,-12.6l-0.35,-1.4h-61.355v21h42c-3.3425,19.8625 -21.1925,35 -42,35c-23.205,0 -42,-18.795 -42,-42c0,-23.205 18.795,-42 42,-42c10.5,0 20.0725,3.885 27.44,10.255l15.05,-14.735c-11.2,-10.255 -26.11,-16.52 -42.49,-16.52zM175,77v21h-21v14h21v21h14v-21h21v-14h-21v-21z"}
+            Googleで登録
+  .single-footer
+    %nav
+      %ul.clearfix
+        %li
+          %a{:href => "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
+        %li
+          %a{:href => "https://www.mercari.com/jp/tos/"} メルカリ利用規約
+        %li
+          %a{:href => "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
+    %nav
+      %a.single-footer-logo{:href => "https://www.mercari.com/jp/"}
+        %img{:alt => "mercari", :height => "65", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?819506670", :width => "80"}/
+      %p
+        %small © 2018 Mercari
+      %nav

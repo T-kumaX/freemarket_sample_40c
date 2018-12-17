@@ -2,11 +2,11 @@
   .header__inner
     .header__inner-upper.clearfix
       %h1.left
-        = link_to do
+        = link_to root_path do
           = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?206587138", size: "134x36"
       = form_with url: items_path, class: "header__inner-upper-form right", method: :get, local: true do |f|
         = f.text_field :keyword, type: 'search', class: 'input-area', placeholder: "キーワードから探す"
-        = button_tag type: 'submit', class: "icon-search" do
+        = button_tag type: 'submit', class: "search" do
           %i.fa.fa-search
     .header__inner-nav.clearfix
       .header__inner-nav-box.left
@@ -74,8 +74,98 @@
                 = link_to items_path do
                   アディダス
       .header__inner-nav-box.right
-        .header-login-nav
-          = link_to items_path do
-            .header-btn.btn-red ログイン
-          = link_to items_path do
-            .header-btn.header-signup 新規会員登録
+        - if user_signed_in?
+          %ul.pc-header-user-nav
+            %li
+              %a.sp-header-user-icon.pc-header-nav-root{:href => "/users/mypage"}
+                %figure
+                  %div
+                    %img{:alt => "", :src => "//static-mercari-jp-imgtr2.akamaized.net/thumb/members/508352206.jpg?1432605748", :width => "32"}/
+                %span マイページ
+              .pc-header-user-box.pc-header-mypage-box
+                .pc-header-mypage-state.text-center
+                  %figure
+                    %div
+                      %img{:alt => "", :src => "//static-mercari-jp-imgtr2.akamaized.net/thumb/members/508352206.jpg?1432605748", :width => "60"}/
+                    %figcaption 馬馬馬
+                  %ul.pc-header-mypage-review-listing
+                    %li
+                      %a{:href => "https://www.mercari.com/jp/mypage/review/history/"} 評価: 6
+                    %li
+                      %a{:href => "https://www.mercari.com/jp/mypage/listings/listing/"} 出品数: 13
+                  .pc-header-mypage-sales-point
+                    %div
+                      %a.sales-point.clearfix{:href => "https://www.mercari.com/jp/mypage/sales/"}
+                        .ml.left 売上金
+                        .mr.right
+                          ¥ 0
+                          %i.fa.fa-angle-right.icon-arrow-right
+                    %div
+                      %a.sales-point.clearfix{:href => "https://www.mercari.com/jp/mypage/point/"}
+                        .ml.left ポイント
+                        .mr.right
+                          P 0
+                          %i.fa.fa-angle-right.icon-arrow-right
+                %ul.mypage-nav-list
+                  %li
+                    %a.mypage-nav-list-item{:href => "https://www.mercari.com/jp/mypage/like/history/"}
+                      いいね！一覧
+                      %i.fa.fa-angle-right.icon-arrow-right
+                  %li
+                    %a.mypage-nav-list-item{:href => "https://www.mercari.com/jp/mypage/listings/listing/"}
+                      出品した商品 - 出品中
+                      %i.fa.fa-angle-right.icon-arrow-right
+                  %li
+                    %a.mypage-nav-list-item{:href => "https://www.mercari.com/jp/mypage/listings/in_progress/"}
+                      出品した商品 - 取引中
+                      %i.fa.fa-angle-right.icon-arrow-right
+                  %li
+                    %a.mypage-nav-list-item{:href => "https://www.mercari.com/jp/mypage/listings/completed/"}
+                      出品した商品 - 売却済み
+                      %i.fa.fa-angle-right.icon-arrow-right
+                  %li
+                    %a.mypage-nav-list-item{:href => "https://www.mercari.com/jp/mypage/purchase/"}
+                      購入した商品 - 取引中
+                      %i.fa.fa-angle-right.icon-arrow-right
+                  %li
+                    %a.mypage-nav-list-item{:href => "https://www.mercari.com/jp/mypage/purchased/"}
+                      購入した商品 - 過去の取引
+                      %i.fa.fa-angle-right.icon-arrow-right
+            %li{"data-id" => "pc-header-user-nav", "data-key" => "notification_list", "data-url" => "https://www.mercari.com/jp/mypage/notification_and_todo_json/"}
+              %a.pc-header-nav-root{"data-url" => "https://www.mercari.com/jp/mypage/notification_and_todo_json/", :href => "https://www.mercari.com/jp/mypage/notification/"}
+                %i.fa.fa-bell.icon-bell
+                %span お知らせ
+                .pc-header-nav-count
+                  1
+              %ul.pc-header-user-box.pc-header-notification-box.mypage-item-list{"data-id" => "pc-header-user-items"}
+                %li
+                  %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/"}
+                    %figure
+                      %img{:src => "//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png"}/
+                    .mypage-item-body
+                      .mypage-item-text 【機能のお知らせ】商品出品時に画像を最大10枚登録できるようになりました！
+                      %time
+                        %i.icon-time
+                        %span 3 時間前
+                    %i.fa.fa-angle-right.icon-arrow-right
+                %li
+                  %a.mypage-item-link{:href => "https://item.mercari.com/jp/m243824936/"}
+                    %figure
+                      %img{:src => "//static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m243824936_1.jpg?1544141141"}/
+                    .mypage-item-body
+                      .mypage-item-text いいね！した「☆ 限定値下げ！ナノユニバ...」にコメントがつきました
+                      %time
+                        %i.icon-time
+                        %span 2 日前
+                    %i.fa.fa-angle-right.icon-arrow-right
+            %li{"data-id" => "pc-header-user-nav", "data-key" => "todo_list", "data-url" => "https://www.mercari.com/jp/mypage/notification_and_todo_json/"}
+              %a.pc-header-nav-root{"data-url" => "https://www.mercari.com/jp/mypage/notification_and_todo_json/", :href => "https://www.mercari.com/jp/mypage/todo/"}
+                %i.fa.fa-check.icon-check
+                %span やることリスト
+              %ul.pc-header-user-box.pc-header-todo-box.mypage-item-list{"data-id" => "pc-header-user-items"}
+                %li.mypage-item-not-found.bold 現在、やることリストはありません
+        - else
+          .header__inner-nav-box.right
+            .header-login-nav
+              = link_to "ログイン", new_user_session_path, class: 'header-btn btn-red'
+              = link_to "新規会員登録", registration_users_path, class: 'header-btn header-signup'

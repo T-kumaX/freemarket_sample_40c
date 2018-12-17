@@ -19,7 +19,7 @@
           border: 1px solid #ccc;
           border-radius: 5px;
         }
-        .icon-search {
+        .search {
           position: absolute;
           top: 0;
           right: 0;
@@ -36,7 +36,7 @@
       margin-top: 5px;
       background-color: #fff;
       .header-nav {
-        font-size: 12px;
+        font-size: 14px;
         .header-nav-root {
           position: relative;
           height: 38px;
@@ -78,7 +78,7 @@
         }
       }
       .header-login-nav {
-        font-size: 12px;
+        font-size: 14px;
         height: 38px;
         line-height: 32px;
         .header-btn {
@@ -91,6 +91,363 @@
   }
 }
 
+.pc-header-user-nav {
+  font-size: 13px;
+  li {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 16px;
+    vertical-align: middle;
+    .pc-header-nav-root {
+      position: relative;
+      height: 38px;
+      line-height: 32px;
+      figure {
+        display: inline-block;
+        position: relative;
+        width: 32px;
+        height: 32px;
+        margin: 0 auto;
+        vertical-align: middle;
+        div {
+          overflow: hidden;
+          border-radius: 50%;
+        }
+      }
+      span {
+        display: inline-block;
+        margin: 0 0 0 8px;
+        font-size: 13px;
+        vertical-align: middle;
+      }
+    }
+    .pc-header-user-box {
+      position: absolute;
+      top: 38px;
+      z-index: 1;
+      display: none;
+      width: 320px;
+      background: #fff;
+      -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+      font-size: 14px;
+      .pc-header-mypage-state.text-center {
+        figure {
+          padding: 28px 0 0;
+          height: 80px;
+          background: url("https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg");
+          background-repeat: no-repeat;
+          background-size: 320px 80px;
+          div {
+            overflow: hidden;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            border-radius: 50%;
+            -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.08);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.08);
+          }
+          figcaption {
+            margin: 8px 0 0;
+            padding: 0 8px;
+            font-size: 16px;
+          }
+        }
+        .pc-header-mypage-review-listing {
+          margin: 40px 0 0;
+          padding: 8px 8px 0;
+          font-size: 0;
+          text-align: center;
+          li {
+            display: inline-block;
+            margin: 0 8px;
+            font-size: 14px;
+          }
+        }
+        .pc-header-mypage-sales-point {
+          width: 300px;
+          margin: 16px auto;
+          background: #fafafa;
+          border: 1px solid #eee;
+          div {
+            border-top: 1px solid #eee;
+            .sales-point {
+              padding: auto 8px;
+              -webkit-appearance: none;
+              line-height: 40px;
+              .ml {
+                margin-left: 10px;
+              }
+              .mr {
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+      .mypage-nav-list {
+        margin: 8px 0 0;
+        li {
+          width: 100%;
+          border-top: 1px solid #eee;
+          display: inline-block;
+          .mypage-nav-list-item {
+            position: relative;
+            display: block;
+            min-height: 48px;
+            padding: 16px 8px;
+            background: #fff;
+            color: #333;
+          }
+        }
+      }
+      .mypage-item-not-found {
+        padding: 160px 0 60px;
+        background: url("https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?36255015");
+        background-repeat: no-repeat;
+        background-position: center 40px;
+        background-size: 78px 85px;
+        text-align: center;
+        font-size: 16px;
+        color: #ccc
+      }
+    }
+  }
+}
+
+.pc-header-nav-count {
+  position: absolute;
+  top: -3px;
+  left: 6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ea352d;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #fff;
+}
+
+
+.mypage-item-list {
+  margin-top: -4px;
+  li {
+    position: relative;
+    border-bottom: 1px solid #eee;
+    .mypage-item-link {
+      display: block;
+      min-height: 80px;
+      padding: 16px;
+      color: #333;
+      figure {
+        position: relative;
+        overflow: hidden;
+        float: left;
+        width: 48px;
+        height: 48px;
+      }
+      .mypage-item-body {
+        margin: 0 40px 0 68px;
+        .mypage-item-text {
+          display: block;
+          display: -webkit-box;
+          max-height: 4.4em;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          line-height: 1.5
+        }
+      }
+    }
+  }
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.sp-header-user-icon {
+  padding-top: 3px;
+  display: block;
+  color: #333;
+  font-size: 0;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
+
+.pc-header-nav-root:hover {
+    color: #0099e8
+}
+
+.pc-header-mypage-review-listing a:hover {
+    text-decoration: underline;
+}
+
+.mypage-item-list li:last-child {
+    border: 0
+}
+
+.mypage-item-list li:first-child {
+    border-bottom: 1px solid #eee
+}
+
+.mypage-item-list li.mypage-item-not-found {
+    border: 0
+}
+
+.mypage-item-list img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%
+}
+
+.mypage-item-list img.is-higher-height {
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%)
+}
+
+.mypage-item-list img.is-higher-width {
+    width: auto;
+    left: 50%;
+    right: auto;
+    height: 100%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0)
+}
+
+.pc-header-mypage-box {
+  left: 0
+}
+
+.pc-header-notification-box {
+  border: solid 1px #ddd;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.pc-header-todo-box {
+  right: 0;
+  border: solid 1px #ddd;
+  text-align: center;
+}
+
+.pc-header-nav-root:hover {
+    color: #0099e8;
+}
+
+.icon-bell {
+  font-size: 17px;
+}
+
+.icon-time {
+  font-size: 16px;
+  vertical-align: middle
+}
+
+.pc-header-user-nav > li:hover .pc-header-user-box {
+    display: block;
+}
+
+.pc-header-user-nav > li > a:hover {
+    text-decoration: none;
+    opacity: 1
+}
+
+.mypage-item-link .icon-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%)
+}
+
+.pc-header-mypage-sales-point {
+  width: 300px;
+  margin: 16px auto;
+  background: #fafafa;
+  border: 1px solid #eee;
+}
+
+.pc-header-mypage-sales-point .icon-arrow-right {
+  position: relative;
+  top: 10px;
+  font-size: 18px;
+  margin: 0 0 0 8px;
+  color: #ccc
+}
+
+.pc-header-mypage-state ul li:hover > a {
+  color: #999 !important;
+  text-decoration: underline !important;
+}
+
+.pc-header-mypage-state div div:hover > a {
+  color: #999 !important;
+}
+
+.mypage-nav-list > li:hover a {
+  background: #fafafa !important;
+  text-decoration: none;
+  opacity: 1
+}
+
+.mypage-nav-list > li:hover {
+  background: #fafafa;
+  text-decoration: none;
+  opacity: 1
+}
+
+.mypage-item-list li:hover {
+  background: #fafafa;
+  opacity: 1;
+  text-decoration: none
+}
+
+.mypage-item-list a:hover {
+  background: #fafafa;
+  opacity: 1;
+  text-decoration: none
+}
+
+.mypage-nav-list a:hover .icon-arrow-right {
+    -webkit-transform: translate(4px, -50%);
+    transform: translate(4px, -50%);
+    color: #333
+}
+
+.mypage-nav-list-item.active {
+    background: #eee;
+    font-weight: 600
+}
+
+.mypage-nav-list-item.active .icon-arrow-right {
+    color: #333
+}
+
+.mypage-nav-list-item.active:hover {
+    background: #eee
+}
+
+.mypage-nav-list-item .icon-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    color: #ccc;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s
+}
+
 .left {
   float: left;
 }
@@ -99,7 +456,7 @@
   float: right;
 }
 
-a {
+.header-nav-root a {
   color: #333 !important;
   text-decoration: none !important;
 }
@@ -108,9 +465,24 @@ ul {
   list-style: none;
 }
 
+.header-mypage-box {
+  display: none;
+}
+
+.header-user-nav ul {
+  display: none;
+}
+
+.header-user-nav li:hover > div {
+  display: block;
+}
+
+.header-user-nav li:hover > ul {
+  display: block;
+}
+
 .header-nav ul {
   display: none;
-
   a {
     display: block;
     padding-left: 8px;

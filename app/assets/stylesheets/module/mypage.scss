@@ -1,0 +1,104 @@
+.mypage-user-icon{
+  height: 200px;
+  background: url("https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?27899896");
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  a{
+    margin-top: 25px;
+    display: block;
+    top: 50%;
+    border-radius: 50%;
+    figure{
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+      img{
+      }
+    }
+    h2{
+      font-size: 14px;
+    }
+
+    mypage-number{
+      display: inline-block;
+      span{
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.nav-tabs{
+  background-color: #eee;
+  li{
+    width:50%;
+    a{
+      text-align: center;
+      font-size: 16px;
+      line-height: 72px;
+      font-weight: bold;
+      padding: 0;
+    }
+  }
+  .active{
+    background-color: #fff;
+  }
+}
+
+.tab-content{
+  .tab-pane{
+    ul{
+      li{
+        border-bottom: 1px solid #eee;
+        a{
+          position: relative;
+          display: block;
+          height: 80px;
+          padding: 16px;
+          color: #333;
+          &:hover{
+            background-color: #eee;
+            opacity: 0.5;
+          }
+          img{
+            width:48px;
+            height: 48px;
+          }
+          i{
+            position: absolute;
+            top: 35%;
+            right: 16px;
+            color: #333;
+          }
+        }
+      }
+      .mypage-go-list{
+        padding: 16px;
+        a{
+          font-size: 14px;
+          display: block;
+          height: 56px;
+          margin: 0 auto;
+          background-color: #eee;
+          line-height: 32px;
+          text-align: center;
+          &:hover{
+            opacity: 0.5
+          }
+        }
+      }
+    }
+  }
+}
+
+.mypage-tab-container{
+  margin-top: 40px;
+  h2{
+    padding: 0 16px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 72px;
+    background-color: #fafafa;
+  }
+}

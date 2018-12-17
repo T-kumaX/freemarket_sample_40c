@@ -1,0 +1,25 @@
+<section>
+  <h2>
+    プロフィール
+  </h2>
+
+  <%= form_with model: @users do |form| %>
+
+    <div class="setting-profile-icon">
+
+      <img src="//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png" width="60" height="60">
+
+      <%= form.text_field :name, placeholder: "例)AYA☆セール中", class: "input-name"%>
+
+    </div>
+
+    <div class="setting-profile-comment">
+
+      <%= form.text_area :profile, placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪", class: "input-textarea" %>
+
+      <%= form.submit value: "変更する", class: "input-submit" %>
+
+    </div>
+
+  <% end %>
+</section>

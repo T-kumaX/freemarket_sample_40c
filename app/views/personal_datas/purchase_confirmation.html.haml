@@ -1,0 +1,117 @@
+%body
+  %header.single-header_3
+    %h1
+      %a{:href => "https://www.mercari.com/jp/"}
+        %img{:alt => "mercari", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3410070962"}/
+%main.single-main
+  %section.l-single-container_3.buy-item-container
+    %h2.l-single-head_3 購入を確定しますか？
+    %section.buy-content_3.buy-item_3
+      .buy-content-inner_3
+        %h3.buy-item-image
+          %img.lazyloaded_3{:alt => "", "data-src" => "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96268793860_1.jpg?1544867742", :src => "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96268793860_1.jpg?1544867742"}/
+        %p.buy-item-name_3.bold_3 ミサンガ アンクレット ホワイト
+        %form.buy-form_3{:action => "https://www.mercari.com/jp/transaction/buy/done/m96268793860/", :method => "POST", :novalidate => "novalidate"}
+          %p.buy-price-ja_3.bold_3
+            ¥ 300
+            %span.item-shipping-fee_3.f14_3.bold_3 送料込み
+          %ul.buy-accordion_3
+            %li.accordion-parent
+              .accordion-toggle_3
+                ポイントを使う
+                %i.icon-arrow-bottom.accordion-icon
+              %ul.accordion-child
+                %li.bold_3 所持ポイント: P 500
+                %li.form-group_3{"data-buy" => "parent"}
+                  .radio-default
+                    %label
+                      %input{"data-buy" => "none", :name => "consume_point_radio", :type => "radio", :value => "none"}>/
+                      ポイントを使わない
+                  .radio-default
+                    %label
+                      %input{"data-buy" => "all", :name => "consume_point_radio", :type => "radio", :value => "all"}/
+                      %input{:type => "hidden", :value => "300"}/
+                      すべてのポイントを使う
+                      %br/
+                      P 300
+                  .radio-default
+                    %label
+                      %input{"data-buy" => "part", :name => "consume_point_radio", :type => "radio", :value => "partial"}/
+                      一部のポイントを使う
+                  %input.input-default{"data-buy" => "part_num", "data-input" => "money", :placeholder => "使うポイントを入力", :type => "number", :value => ""}/
+                  %input{"data-buy" => "result", :name => "consume_point", :type => "hidden", :value => "0"}/
+          %ul.buy-price-table_3
+            %li.buy-price-row_3.buy-you-pay_3.bold_3
+              .buy-price-cell_3 支払い金額
+              .buy-price-cell_3_2
+                %span.span_price{"data-buy-pay" => "300"} ¥ 300
+          %input{:name => "seller_id", :type => "hidden", :value => "385935969"}/
+          %input{:name => "payment_fee", :type => "hidden", :value => "0"}/
+          %input{:name => "payment_amount", :type => "hidden", :value => "300"}/
+          %input{:name => "price", :type => "hidden", :value => "300"}/
+          %input{:name => "category_id", :type => "hidden", :value => "911"}/
+          %input{:name => "item_condition", :type => "hidden", :value => "1"}/
+          %input{:name => "shipping_payer", :type => "hidden", :value => "2"}/
+          %input{:name => "shipping_method", :type => "hidden", :value => "9"}/
+          %input{:name => "shipping_duration", :type => "hidden", :value => "2"}/
+          %input{:name => "shipping_class", :type => "hidden", :value => "0"}/
+          %input{:name => "zip_code1", :type => "hidden", :value => "770"}/
+          %input{:name => "zip_code2", :type => "hidden", :value => "0037"}/
+          %input{:name => "paid_method", :type => "hidden", :value => "card"}/
+          %input{:name => "checksum", :type => "hidden", :value => "aa350a0fd06f2b89b01f69acebe25b79"}/
+          %input{:name => "payment_card_sequence_no", :type => "hidden", :value => ""}/
+          %input{:name => "payment_use_last_card_base64", :type => "hidden", :value => "eWVz"}/
+          %input{:name => "item_name_base64", :type => "hidden", :value => "44Of44K144Oz44KsIOOCouODs+OCr+ODrOODg+ODiCDjg5vjg6/jgqTjg4g="}/
+          %input{:name => "description_base64", :type => "hidden", :value => "44K044O844Or44OJ44Oq44Oz44Kw5LuY44GNCgroqr/nr4Dlj6/og73jgavlpInmm7TjgIHjgqrjg7zjg4Djg7zjgoLlj5fjgZHku5jjgZHjgb7jgZleX17jgrPjg6Hjg7Pjg4jkuIvjgZXjgYTvvIjilbnil6HilbnvvInov73liqDmlpnph5Hjga/poILjgY3jgb7jgZvjgpPvvIjilbnil6HilbnvvIkgICAgICAgICAgICAKCue3qOOBv+ebrjE244K744Oz44OBICAg5YWo6ZW3MzDjgrvjg7Pjg4EKCueUt+aAp+OBp+OCguS9v+OBiOOCi+mVt+OBleOBp+OBmV4gXgoK44OW44Os44K544Os44OD44OI44Of44K144Oz44Ks44Gr44KC44Ki44Oz44Kv44Os44OD44OI44Gr44KC44Gn44GN44G+44GZ44CCCgrnhKHoqIDjgafjga7ljbPos7zlhaVPS+OBp+OBme+8gQoK6KSH5pWw6LO85YWl44Gu5aC05ZCI77yS44Gk55uu44GL44KJMTAw5YaG5byV44GN6Ie044GX44G+44GZ77yBCgropIfmlbDjgZTos7zlhaXjga7loLTlkIjjgrPjg6Hjg7Pjg4jkuIvjgZXjgYTvvIEKCue0oOS6uuOBrui2o+WRs+OBp+S9nOOBo+OBpuOBiuOCiuOBvuOBmeOBruOBp+elnue1jOizquOBquaWueOBr+OBlOmBoOaFruOBj+OBoOOBleOBhO+8iOKVueKXoeKVue+8iQoK5LuW44Gr44KC5aSa5pWw44GU44GW44GE44G+44GZXiAtIF4KCgoKI+ODj+ODs+ODieODoeOCpOODiSPjgqjjgrnjg4vjg4Pjgq/poqgj44K144O844OV44Kh44O8CiPjg5/jgrXjg7Pjgqwj44GK5a6I44KKI+OCteODg+OCq+ODvCPlm73ml5cKI+OCouODs+OCr+ODrOODg+ODiCPnp4voibLmjqLjgZcj44K544Od44O844OECiPlrrbml48j5Yud5Yip56WI6aGYI+i2s+WFgyPmiYvpppYj44Ob44Ov44Kk44OI44OH44O8CiPjg5rjgqIj44K344Oz44OX44OrI+OCueOCv+OCpOODquODg+OCt+ODpQoj44OV44Kh44OD44K344On44OzI+ODneOCpOODs+ODiOa2iOiyuwoj44OX44Os44K844Oz44OII+i/veWKoOaWmemHkTDlhobvvIPjgq/jg6rjgrnjg57jgrkKI+iomOW/teaXpSPjgqrjg7zjg4Djg7zlj5fjgZHku5jkuK0j5aSPI+a1tw=="}/
+          %input{:name => "shipping_from_area_base64", :type => "hidden", :value => "MQ=="}/
+          %input{:name => "family_name_base64", :type => "hidden", :value => "56Ov6YOo"}/
+          %input{:name => "first_name_base64", :type => "hidden", :value => "5ouT56Oo"}/
+          %input{:name => "family_name_kana_base64", :type => "hidden", :value => "44Kk44K944OZ"}/
+          %input{:name => "first_name_kana_base64", :type => "hidden", :value => "44K/44Kv44Oe"}/
+          %input{:name => "prefecture_base64", :type => "hidden", :value => "5b6z5bO255yM"}/
+          %input{:name => "city_base64", :type => "hidden", :value => "5b6z5bO25biC5p2x5ZCJ6YeO55S65Y2X5L2Q5Y+k"}/
+          %input{:name => "address1_base64", :type => "hidden", :value => "N+eVqueUujQtNQ=="}/
+          %input{:name => "address2_base64", :type => "hidden", :value => "44Gk44Gk44GY6I2Y"}/
+          %input{:name => "telephone_base64", :type => "hidden", :value => "MDgwNTIxOTUyODE="}/
+          %input{:name => "__csrf_value", :type => "hidden", :value => "131d3d4ca62e4b0141e8d8609b69aaa5addd8111a390ce8b23ac6a4e9e9cfdd94786a7edcdfd7615fabee9f86ecaded17cbae1699b6ea20f1d295da2b11260fed"}/
+          %input{:name => "_s", :type => "hidden", :value => "U2FsdGVkX18NsesncmWM9C1PLnTT0_2gp34vfUnMsRqPTRUi4xPjo3QEiLV2Nj-fqBqFkiDWgBP1Cmg__vY8JLu_bVZj2PGfvssmmzibChbjWIlz9-wmJUqBHZ95nZZp"}/
+          %p.has-error-text_3 配送先と支払い方法の入力を完了してください。
+          %button.btn-default_3.btn-red_3.bold_3{:disabled => "disabled", :type => "submit"} 購入する
+          %input#user_info_is_not_complete{:type => "hidden"}/
+    %section.buy-content_3.buy-user-info_3
+      .buy-content-inner_3
+        %h3 配送先
+        %address.buy-user-info-text_3
+          1600 Pennsylvania Avenue NW, Washington, D.C. 20500 U.S.A.
+          %br/
+          %br/
+          Donald John Trump
+        %p.buy-user-info-text_3
+        %a.buy-user-info-fix_3{:href => "https://www.mercari.com/jp/transaction/address/m96268793860/?_s=U2FsdGVkX18NsesncmWM9C1PLnTT0_2gp34vfUnMsRqPTRUi4xPjo3QEiLV2Nj-fqBqFkiDWgBP1Cmg__vY8JLu_bVZj2PGfvssmmzibChbjWIlz9-wmJUqBHZ95nZZp"}
+          %span.aaa 変更する
+          %i.fas.fa-angle-right
+    %section.buy-content_3.buy-user-info_3{"data-buy" => "pay-method"}
+      .buy-content-inner_3
+        %h3 支払い方法
+        %p.buy-user-info-text_3
+          %br/
+          \/
+        %figure
+          %img{:alt => "", :height => "", :src => "", :width => ""}/
+        %p
+        %a.buy-user-info-fix_3{:href => "https://www.mercari.com/jp/transaction/card/m96268793860/?_s=U2FsdGVkX18NsesncmWM9C1PLnTT0_2gp34vfUnMsRqPTRUi4xPjo3QEiLV2Nj-fqBqFkiDWgBP1Cmg__vY8JLu_bVZj2PGfvssmmzibChbjWIlz9-wmJUqBHZ95nZZp"}
+          %span.aaa 変更する
+          %i.fas.fa-angle-right
+%footer.single-footer_3
+  %nav
+    %ul.clearfix
+      %li
+        %a{:href => "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
+      %li
+        %a{:href => "https://www.mercari.com/jp/tos/"} メルカリ利用規約
+      %li
+        %a{:href => "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
+  %a.single-footer-logo_3{:href => "https://www.mercari.com/jp/"}
+    %img{:alt => "mercari", :height => "65", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?3410070962", :width => "80"}/
+  %p
+    %small © 2018 Mercari
