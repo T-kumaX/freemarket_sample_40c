@@ -7,7 +7,7 @@
 |nickname|string|null: false、unique:true|
 |image|text|
 |email|string|null: false, unique:true|
-|password|string|null: false, unique:true|
+|password|string|null: false|
 |profile|text|
 
 ### Association
@@ -36,12 +36,14 @@
 |second_category_id|reference|null: false, foreign_key: true|
 |third_category_id|reference|null: false, foreign_key: true|
 |brand_id|reference|null: false, foreign_key: true|
-|seller_id|reference|foreign_key: true|
-|buyer_id|reference|foreign_key: true|
+|size_id|reference|foreign_key: true|
+|seller_id|integer|foreign_key: true|
+|buyer_id|integer|foreign_key: true|
 
 ### Association
 - belongs_to :user
 - belongs_to :brand
+- belongs_to :size
 - belongs_to :first_category
 - belongs_to :second_category
 - belongs_to :third_category
@@ -50,8 +52,9 @@
 - has_many :comments
 - has_one :image
 - has_one :delivery
-- has_one :size
 - has_one :dealing
+- belongs_to :saler, class_name: "User"
+- belongs_to :buyer, class_name: "User"
 
 
 ## imagesテーブル
@@ -84,7 +87,7 @@
 |column|Type|options|
 |------|----|-------|
 |name|string|null: false|
-|first_category_id|foreign_key: true|
+|first_category_id|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :first_category
@@ -97,7 +100,7 @@
 |column|Type|options|
 |------|----|-------|
 |name|string|null: false|
-|second_category_id|foreign_key: true|
+|second_category_id|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :second_category
@@ -107,7 +110,7 @@
 
 |column|Type|options|
 |------|----|-------|
-|name|string|
+|name|string|null: false|
 
 ### Association
 - has_many :items
@@ -117,7 +120,7 @@
 
 |column|Type|options|
 |------|----|-------|
-|comment|text|
+|comment|text|null: false|
 |user_id|reference|null: false, foreign_key: true|
 |item_id|reference|null: false, foreign_key: true|
 
@@ -238,11 +241,10 @@
 
 |column|Type|options|
 |------|----|-------|
-|size|string|
-|item_id|reference|null: false, foreign_key: true|
+|size|string|null: false|
 
 ### Association
-- belongs_to :item
+- has_many :items
 
 
 ## dealingsテーブル

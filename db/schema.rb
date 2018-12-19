@@ -10,7 +10,62 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181214063729) do
+ActiveRecord::Schema.define(version: 20181219031931) do
+
+  create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "first_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name", null: false
+    t.integer "price", null: false
+    t.text "description"
+    t.string "condition", null: false
+    t.bigint "first_category_id", null: false
+    t.bigint "second_category_id"
+    t.bigint "third_category_id"
+    t.bigint "brand_id", null: false
+    t.integer "seller_id"
+    t.integer "buyer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "size_id"
+    t.index ["brand_id"], name: "index_items_on_brand_id"
+    t.index ["first_category_id"], name: "index_items_on_first_category_id"
+    t.index ["name"], name: "index_items_on_name"
+    t.index ["second_category_id"], name: "index_items_on_second_category_id"
+    t.index ["third_category_id"], name: "index_items_on_third_category_id"
+  end
+
+  create_table "second_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name", null: false
+    t.bigint "first_category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["first_category_id"], name: "index_second_categories_on_first_category_id"
+  end
+
+  create_table "sizes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "third_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name", null: false
+    t.bigint "second_category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["second_category_id"], name: "index_third_categories_on_second_category_id"
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
@@ -27,4 +82,10 @@ ActiveRecord::Schema.define(version: 20181214063729) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "items", "brands"
+  add_foreign_key "items", "first_categories"
+  add_foreign_key "items", "second_categories"
+  add_foreign_key "items", "third_categories"
+  add_foreign_key "second_categories", "first_categories"
+  add_foreign_key "third_categories", "second_categories"
 end
