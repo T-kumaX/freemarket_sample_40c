@@ -61,10 +61,10 @@
 
 |column|Type|options|
 |------|----|-------|
-|image1|text|null: false, index: true|
-|image2|text|index: true|
-|image3|text|index: true|
-|image4|text|index: true|
+|image1|text|null: false|
+|image2|text|
+|image3|text|
+|image4|text|
 |item_id|reference|null: false, foreign_key: true|
 
 ### Association
@@ -167,10 +167,10 @@
 
 |column|Type|options|
 |------|----|-------|
-|fee|integer|
-|kind|string|
+|fee|string|null: false|
+|kind|string|null: false|
 |area|string|null: false|
-|delivery-days|string|
+|delivery_days|string|null: false|
 |item_id|reference|null: false, foreign_key: true|
 
 ### Association
@@ -241,7 +241,7 @@
 
 |column|Type|options|
 |------|----|-------|
-|size|string|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :items
