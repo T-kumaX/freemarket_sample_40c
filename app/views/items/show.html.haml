@@ -1,0 +1,201 @@
+= render partial: 'items/shared/header'
+= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+.item__box-container
+  %h1.item-name
+    =@item.name
+  .item-main-content
+    .item-image
+      .active-image
+        %p
+          %img{src: @item.image.image1.url}
+          %img{src: @item.image.image2.url}
+          %img{src: @item.image.image3.url}
+          %img{src: @item.image.image4.url}
+      .images
+        %ol
+          %li
+            %img.item-slide.item-image1{src: @item.image.image1.url}
+          -if @item.image.image2.present?
+            %li
+              %img.item-slide.item-image2{src: @item.image.image2.url}
+          -if @item.image.image3.present?
+            %li
+              %img.item-slide.item-image3{src: @item.image.image3.url}
+          -if @item.image.image4.present?
+            %li
+              %img.item-slide.item-image4{src: @item.image.image4.url}
+    .item-tabel
+      %table.item-detail-table
+        %tbody
+          %tr
+            %th
+              出品者
+            %td
+              %a{href: "#"}
+                =@item.seller.nickname if @item.seller_id
+              %div
+                .item-user-raiting
+                  %i.icon.fa.fa-smile
+                  %span 618
+                .item-user-raiting
+                  %i.icon.fa.fa-meh
+                  %span 22
+                .item-user-raiting
+                  %i.icon.fa.fa-frown
+                  %span 3
+          %tr
+            %th
+              カテゴリー
+            %td
+              %a{href: "#"}
+                =@item.first_category.name
+              %a{href: "#"}
+                .sub-category
+                  %i.fa.fa-angle-right
+                  =@item.second_category.name if @item.second_category
+              %a{href: "#"}
+                .sub--sub-category
+                  %i.fa.fa-angle-right
+                  =@item.third_category.name if @item.third_category
+          %tr
+            %th
+              ブランド
+            %td
+              =@item.brand.name
+          %tr
+            %th
+              商品の状態
+            %td
+              =@item.condition
+          %tr
+            %th
+              配送料の負担
+            %td
+              =@delivery.fee
+          %tr
+            %th
+              配送の方法
+            %td
+              =@delivery.kind
+          %tr
+            %th
+              配送元地域
+            %td
+              %a{href: "#"} 兵庫県
+          %tr
+            %th
+              発送日の目安
+            %td
+              =@delivery.delivery_days
+  .item-price-box
+    %span.item-price
+      ="¥ " + @item.price.to_s
+    %span.item-tax (税込)
+    %span.item-shipping 送料込み
+  =link_to "購入画面に進む", buy_item_url, class: "item-buy-btn sell"
+  -if @item.buyer_id
+    %input{name: "buyer_id", type: "hidden", value: @item.buyer_id, class: "buyer-id"}
+  .item-description
+    =simple_format(@item.description, class:'item-description-inner')
+
+  .item-button-list
+    %button{type: "button"}
+      %i.far.fa-heart
+      %span いいね！
+      %span 6
+    %a.flag{href: "#"}
+      %i.far.fa-flag
+      %span 不適切な商品の報告
+    %a.lock{href: "#"}
+      %i.fas.fa-unlock-alt
+      %span あんしん・あんぜんへの取り組み
+.item-detail-message
+  .message-container
+    .message-content
+      %ul.message-items
+        %li
+          .message-user
+            %figure
+              .message-user-unknown
+                %img{alt: "", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/user-icon.svg?3410070962"}/
+          .message-body
+            .message-body-text
+              出品者がコメントを削除しました
+            .message-icons
+              %time.message-icon-left
+                %i.far.fa-clock
+                %span 73日前
+            %i.icon-balloon
+    .message-content
+      = form_with model: @comments do |form|
+        %p
+          相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        = form.text_area :comment
+        = form.submit value="コメントする"
+%ul.nav-item-link
+  %li.nav-item-link-prev
+    - if @previous_item
+      =link_to item_url(@previous_item) do
+        %i.fa.fa-angle-left
+        =@previous_item.name
+  %li.nav-item-link-next
+    - if @next_item
+      =link_to item_url(@next_item) do
+        %i.fa.fa-angle-right
+        =@next_item.name
+.item-social-media-box
+  %ul
+    %li
+      %a.share-btn{"data-window-name" => "facebook_window", href: "http://www.facebook.com/share.php?u=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm58203449858%2F", :target => "_blank"}
+        %i.fab.fa-facebook-square
+    %li
+      %a.share-btn{"data-window-name" => "twitter_window", href: "http://twitter.com/share?count=horizontal&original_referer=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm58203449858%2F&text=%E3%83%AB%E3%82%A4%E3%83%B4%E3%82%A3%E3%83%88%E3%83%B3%20%E9%A6%99%E6%B0%B4%20%E2%80%A6%20%28%C2%A5%2021%2C000%29%20https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm58203449858%2F%20%E3%83%95%E3%83%AA%E3%83%9E%E3%82%A2%E3%83%97%E3%83%AA%E3%80%8C%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%80%8D%E3%81%A7%E8%B2%A9%E5%A3%B2%E4%B8%AD%E2%99%AA%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%20%40mercari_jp%E3%81%95%E3%82%93%E3%81%8B%E3%82%89", target: "_blank"}
+        %i.fab.fa-twitter
+    %li
+      %a.share-btn{"data-window-name" => "pinterest_window", href: "http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm58203449858%2F&media=https%3A%2F%2Fstatic-mercari-jp-imgtr2.akamaized.net%2Fitem%2Fdetail%2Forig%2Fphotos%2Fm58203449858_1.jpg%3F1545016557&description=%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E5%95%86%E5%93%81%3A%20%E3%83%AB%E3%82%A4%E3%83%B4%E3%82%A3%E3%83%88%E3%83%B3%20%E9%A6%99%E6%B0%B4%20%E3%83%80%E3%83%B3%E3%83%A9%E3%83%9D%20100ml%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA", target: "_blank"}
+        %i.fab.fa-pinterest
+.items-in-user-profile
+  %section.items-box-container
+    %h2.items-box-head
+      =link_to "#{@item.seller.nickname}さんのその他の商品", "#"
+    -@user_sell_items.each do |item|
+      .items-box-content
+        %section.items-box
+          %a.items-link{href: item_url(item)}
+            %figure.items-box-photo
+              %img{src: item.image.image1.url}
+            .items-box-body
+              %h3.items-box-name
+                =item.name
+              .items-box-num
+                .items-box-price
+                  ="¥ " + item.price.to_s
+                .items-box-likes
+                  %i.far.fa-heart
+                  %span 1
+                %p.item-box-tax
+                  (税込)
+-unless @same_category_items.blank?
+  .items-in-user-profile
+    %section.items-box-container
+      %h2.items-box-head
+        =link_to "#{@item.third_category.name} (#{@item.first_category.name}) その他の商品", "#"
+      -@same_category_items.each do |item|
+        .items-box-content
+          %section.items-box
+            %a.items-link{href: item_url(item)}
+              %figure.items-box-photo
+                %img{src: item.image.image1.url}
+              .items-box-body
+                %h3.items-box-name
+                  =item.name
+                .items-box-num
+                  .items-box-price
+                    ="¥ " + item.price.to_s
+                  .items-box-likes
+                    %i.far.fa-heart
+                    %span 1
+                  %p.item-box-tax
+                    (税込)
+= render partial: 'items/shared/footer'

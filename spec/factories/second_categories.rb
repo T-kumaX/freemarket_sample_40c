@@ -2,5 +2,7 @@
 
 FactoryGirl.define do
   factory :second_category do
+    name             "トップス"
+    first_category
   end
 end

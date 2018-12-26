@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require './db/seeds/first_category.rb'
+require './db/seeds/second_category.rb'
+require './db/seeds/third_category.rb'
+require './db/seeds/brand.rb'
+require './db/seeds/size.rb'
+load(Rails.root.join('db', 'seeds', "#{Rails.env.downcase}.rb"))

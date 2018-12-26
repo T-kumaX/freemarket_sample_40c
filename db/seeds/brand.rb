@@ -1,0 +1,5 @@
+Brand.find_or_create_by(name: "シャネル")
+Brand.find_or_create_by(name: "ナイキ")
+Brand.find_or_create_by(name: "ルイヴィトン")
+Brand.find_or_create_by(name: "シュプリーム")
+Brand.find_or_create_by(name: "アディダス")

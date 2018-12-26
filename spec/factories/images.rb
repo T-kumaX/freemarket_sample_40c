@@ -2,5 +2,7 @@
 
 FactoryGirl.define do
   factory :image do
+    image1          "decoy.png"
+    item
   end
 end

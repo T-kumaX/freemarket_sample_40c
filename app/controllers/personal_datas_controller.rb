@@ -8,6 +8,4 @@ class PersonalDatasController < ApplicationController
   def credit_card
   end
 
-  def purchase_confirmation
-  end
 end

@@ -2,5 +2,10 @@
 
 FactoryGirl.define do
   factory :delivery do
+    fee           "2"
+    area          "1"
+    delivery_days "3"
+    item
+
   end
 end

@@ -15,6 +15,7 @@
     border-bottom: 2px solid #f5f5f5;
     text-align: center;
     font-size: 24px;
+    font-weight: 600;
 }
 
 .l-single-inner-2 {
@@ -45,17 +46,30 @@
   padding-right: 10px;
 }
 
-.fa-angle-right {
-  float: right;
-  color: #4689FF;
-  font-size: 21px;
-}
-
-.settings-add-card{
+.settings-add-card-2{
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 40px;
   border-bottom: 2px solid #f5f5f5;
+}
+
+.settings-not-regist-2{
+  float: right;
+  .a_bottom {
+    display: flex;
+    padding-right: 73px;
+    .method_of_payment {
+      color: #4689FF;
+      font-size: 14px;
+      padding-top: 3px;
+      padding-right: 10px;
+    }
+    .fa-angle-right {
+      float: right;
+      color: #4689FF;
+      font-size: 22px;
+    }
+  }
 }
 
 .l-single-content-2 {
@@ -68,15 +82,5 @@
   font-weight: 600;
 }
 
-.a_bottom {
-  display: flex;
-  padding-right: 73px;
-}
 
-.method_of_payment {
-  color: #4689FF;
-  font-size: 14px;
-  padding-top: 3px;
-  padding-right: 10px;
-}
 
